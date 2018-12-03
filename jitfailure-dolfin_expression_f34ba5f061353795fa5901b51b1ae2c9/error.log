@@ -1,4 +1,0 @@
-/tmp/tmpre9qi683/dolfin_expression_f34ba5f061353795fa5901b51b1ae2c9.cpp: In member function ‘virtual void dolfin::dolfin_expression_f34ba5f061353795fa5901b51b1ae2c9::eval(Eigen::Ref<Eigen::Matrix<double, -1, 1> >, Eigen::Ref<const Eigen::Matrix<double, -1, 1> >) const’:
-/tmp/tmpre9qi683/dolfin_expression_f34ba5f061353795fa5901b51b1ae2c9.cpp:63:53: error: expected ‘)’ before ‘;’ token
-           values[1] = (-sin(x[0]) - sin(x[1])*cos(t);
-                                                     ^
