@@ -2,20 +2,21 @@ from ufl import *
 from dolfin import *
 import matplotlib.pyplot as plt
 
-mesh = UnitSquareMesh(128, 128)
+mesh = UnitCubeMesh(64,64,64)
 
 BDM = FiniteElement("BDM", mesh.ufl_cell(), 1)
 DG  = FiniteElement("DG", mesh.ufl_cell(), 0)
+#DG1 = FiniteElement("DG", mesh.ufl_cell(), 0)
 W = FunctionSpace(mesh, BDM * DG)
 
 (u, p) = TrialFunctions(W)
 (v, q) = TestFunctions(W)
 
 # pressure
-p_exact= Expression('1 + x[0]*x[0] + 2*x[1]*x[1]', degree=2)
+p_exact= Expression('1 + x[0]*x[0] + 2*x[1]*x[1] + x[2]*x[2]', degree=2)
 # velocity
-u_exact = Expression(('-2*x[0]', '-4*x[1]'), degree = 1)
-f = Expression('-6', degree = 0)
+u_exact = Expression(('-2*x[0]', '-4*x[1]', '-2*x[2]'), degree = 1)
+f = Expression('-8', degree = 0)
 
 n = FacetNormal(mesh)
 a = (dot(u, v) - div(v)*p - div(u)*q)*dx
