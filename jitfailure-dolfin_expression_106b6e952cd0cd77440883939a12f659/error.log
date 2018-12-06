@@ -1,5 +1,0 @@
-/tmp/tmp5mpby5b9/dolfin_expression_106b6e952cd0cd77440883939a12f659.cpp: In member function ‘virtual void dolfin::dolfin_expression_106b6e952cd0cd77440883939a12f659::eval(Eigen::Ref<Eigen::Matrix<double, -1, 1> >, Eigen::Ref<const Eigen::Matrix<double, -1, 1> >) const’:
-/tmp/tmp5mpby5b9/dolfin_expression_106b6e952cd0cd77440883939a12f659.cpp:63:24: error: unable to find numeric literal operator ‘operator""x’
-           values[2] = -2x[2];
-                        ^~
-/tmp/tmp5mpby5b9/dolfin_expression_106b6e952cd0cd77440883939a12f659.cpp:63:24: note: use -std=gnu++11 or -fext-numeric-literals to enable more built-in suffixes
